@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import com.bmdb.business.Actor;
-
+import com.bmdb.business.Movie;
 import com.bmdb.db.ActorRepo;
 
 
@@ -41,6 +41,11 @@ public class ActorController {
 	@DeleteMapping("/{id}")
 	public void delete(@PathVariable int id) {
 		actorRepo.deleteById(id);
+	}
+	@GetMapping("/fandlname/{id}")
+	public Iterable<Movie> getAllByRating(@PathVariable String rating) {
+//		Optional<Movie> movie = movieRepo.findById(id);
+		return movieRepo.findAllByMovieId(rating);
 	}
 
 }

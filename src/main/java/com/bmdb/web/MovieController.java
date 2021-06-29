@@ -40,5 +40,10 @@ public class MovieController {
 	public void delete(@PathVariable int id) {
 		movieRepo.deleteById(id);
 	}
+	@GetMapping("/rating/{id}")
+	public Iterable<Movie> getAllByRating(@PathVariable String rating) {
+//		Optional<Movie> movie = movieRepo.findById(id);
+		return movieRepo.findAllByMovieId(rating);
+	}
 
 }
