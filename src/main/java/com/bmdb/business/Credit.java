@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Entity
 public class Credit {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	@ManyToOne
 	@JoinColumn(name = "ActorID")
@@ -14,7 +14,7 @@ public class Credit {
 	@JoinColumn(name = "MovieID")
 	private Movie movie;
 	private String role;
-	
+
 	public Credit() {
 		super();
 	}
@@ -70,6 +70,5 @@ public class Credit {
 	public String toString() {
 		return "Credit [id=" + id + ", actor=" + actor + ", movie=" + movie + ", role=" + role + "]";
 	}
-	
 
 }

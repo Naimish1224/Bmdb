@@ -11,7 +11,7 @@ public class Movie {
 	private int year;
 	private String rating;
 	private String director;
-		
+
 	public Movie() {
 		super();
 	}
@@ -32,7 +32,7 @@ public class Movie {
 		this.year = year;
 		this.director = director;
 	}
-	
+
 	public int getId() {
 		return id;
 	}

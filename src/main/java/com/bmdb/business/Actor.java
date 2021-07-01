@@ -9,6 +9,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Actor {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
@@ -16,7 +17,7 @@ public class Actor {
 	private String lastName;
 	private String gender;
 	private LocalDate birthDate;
-	
+
 	public Actor() {
 		super();
 	}
@@ -83,7 +84,7 @@ public class Actor {
 		return "Actor [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", gender=" + gender
 				+ ", birthDate=" + birthDate + "]";
 	}
-	
+
 	public String getFullName() {
 		return firstName + " " + lastName;
 	}

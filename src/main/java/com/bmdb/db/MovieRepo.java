@@ -8,6 +8,7 @@ import org.springframework.data.repository.CrudRepository;
 import com.bmdb.business.Movie;
 
 public interface MovieRepo extends CrudRepository<Movie, Integer> {
-	List<Movie> findAllByMovieId(String rating);
+	List<Movie> findAllByRating(String rating);
+	List<Movie> findAllByYearGreaterThanEqual(int year);
 
 }
